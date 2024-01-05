@@ -30,7 +30,7 @@ public class Login extends javax.swing.JFrame {
             
             lg = login.log(correo, pass); //Se llama al método log(correo, pass) en el objeto login, se almacena en lg
             if(lg.getCorreo ()!=null && lg.getPass() != null){
-                Sistema sis = new Sistema ();  //interfaz del sistema después de que el usuario haya iniciado sesión.
+                Sistema sis = new Sistema (lg);  //interfaz del sistema después de que el usuario haya iniciado sesión.
                 sis.setVisible(true); //hacer visible la ventana de la interfaz gráfica Sistema
                 dispose(); //cierra y libera los recursos asociados a la ventana de inicio de sesión actual. 
             }else{
